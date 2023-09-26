@@ -1,7 +1,35 @@
-.element {
-  width: 800px; /* Ширина контенту */
-  padding: 20px; /* Внутрішні відступи */
-  border: 2px solid black; /* Границя */
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+  width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
 
-  box-sizing: border-box; /* Включити box-sizing: border-box */
+.item-enter {
+  transform: translateX(-350px);
+}
+.item-enter-active {
+  transform: translateX(0px);
+  transition: all 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  transform: translateX(-350px);
+  transition: all 1000ms ease-in;
 }
