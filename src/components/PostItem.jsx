@@ -1,8 +1,11 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import Button from "./UI/button/Button";
+import { createBrowserHistory } from "history";
+import { useNavigate } from "react-router-dom";
 
 const PostItem = (props) => {
+  const router = useNavigate();
   const postRef = useRef();
   const [isDelete, setIsDelete] = useState(false);
   const handleRemote = () => {
@@ -31,9 +34,14 @@ const PostItem = (props) => {
       ) : (
         <div>Post remove</div>
       )}
-      <Button onClick={handleRemote} id={props.id}>
-        remove
-      </Button>
+      <div>
+        <Button onClick={() => router(`/posts/${props.id}`)} id={props.id}>
+          Open post
+        </Button>
+        <Button onClick={handleRemote} id={props.id}>
+          remove
+        </Button>
+      </div>
     </div>
   );
 };

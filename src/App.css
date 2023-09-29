@@ -33,3 +33,13 @@
   transform: translateX(-350px);
   transition: all 1000ms ease-in;
 }
+.navbar {
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+.navbar__links {
+  margin-left: auto;
+}
